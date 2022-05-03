@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/categories"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@id/swipeRefresh">
+
+    android:layout_width=""
+    android:layout_height=""
+
+    <Button
+        android:id="@+id/Business"
+        android:layout_width="67dp"
+        android:layout_height="match_parent"
+        android:text=" Business "
+        android:textSize="15dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:paddingHorizontal="1dp"
+        android:background="@color/colorPrimary"
+        android:textAlignment="center"
+        android:textColor="#FF6122"
+        app:layout_constraintRight_toLeftOf="@id/Sports">
+    </Button>
+
+        <Button
+            android:id="@+id/Sports"
+            android:layout_width="67dp"
+            android:layout_height="match_parent"
+            android:text="Sports "
+            android:paddingHorizontal="1dp"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:background="@color/colorPrimary"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_light_background"
+            app:layout_constraintLeft_toRightOf="@id/Business"
+            app:layout_constraintRight_toLeftOf="@id/Entertainment">
+
+        </Button>
+
+        <Button
+            android:id="@+id/Entertainment"
+            android:layout_width="115dp"
+            android:layout_height="match_parent"
+            android:text="Entertainment "
+            android:paddingHorizontal="1dp"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:background="@color/colorPrimary"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_light_background"
+            app:layout_constraintLeft_toRightOf="@id/Sports"
+            app:layout_constraintRight_toLeftOf="@id/Health"
+            >
+
+        </Button>
+
+        <Button
+            android:id="@+id/Health"
+            android:layout_width="67dp"
+            android:layout_height="match_parent"
+            android:text="Health "
+            android:paddingHorizontal="1dp"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:background="@color/colorPrimary"
+            android:textAlignment="center"
+            android:textColor="@color/green"
+            app:layout_constraintLeft_toRightOf="@id/Entertainment"
+            >
+        </Button>
+
+    </LinearLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/categories">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/categories" />
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

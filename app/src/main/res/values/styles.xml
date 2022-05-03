@@ -1,0 +1,24 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#090909</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">serif</item>
+    </style>
+
+    <style name="TextAppearance.AppCompat.Widget.ActionBar.Title" parent="@style/TextAppearance.AppCompat">
+
+        <item name="android:fontFamily">sans-serif-black</item>         //ActionBar Heading
+        <item name="android:textColor">#FFEB3B</item>
+        <item name="android:textSize">25dp</item>
+
+    </style>
+
+    <style name="RoundSquare">
+        <item name="cornerSize">5%</item>
+    </style>
+
+
+</resources>
